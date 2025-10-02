@@ -1,0 +1,83 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+header{
+    background-color: rgb(255, 255, 255);
+}
+
+header h1{
+    color:crimson;
+    font-family:fantasy;
+    font-size: 300%;
+}
+
+header h2{
+    color: rgb(255, 127, 138);
+    font-family: monospace;
+}
+
+h2{
+    color: crimson;
+    font-family: fantasy;
+}
+
+.name{
+    color:rgb(255, 127, 138);
+    font-family: monospace;
+}
+
+h3{
+    color: rgb(255, 127, 138);
+    font-family: monospace;
+}
+
+p{
+    color: rgb(65, 28, 139);
+    font-family: monospace;
+}
+
+dl{
+    font-family: monospace;
+    color: hotpink;
+}
+
+#fnaf{
+    font-family: fantasy;
+    color: rgb(255, 38, 38);
+}
+
+#novel{
+    font-family: cursive;
+    color: fuchsia;
+}
+
+#films{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+}
+
+.interests{
+    font-size: 150%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 127, 138);
+}
+
+.hero{
+    font-size: 150%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 127, 138);
+}
+
+#red{
+     color:crimson;
+}
+
+#blue{
+    color: rgb(65, 28, 139);
+}
+
+a{
+    font-family: monospace;
+    color: rgb(65, 28, 139);
+}
