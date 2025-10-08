@@ -1,0 +1,26 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('image-from-rawpixel-id-5925537-jpeg.jpg');
+    background-repeat: repeat;
+    color: aliceblue;
+}
+
+.active{
+    color: black;
+}
+
+nav a{
+    color: rgb(252, 245, 47);
+}
+
+footer{
+     color: rgb(255, 229, 62);
+}
+
+ul{
+    list-style-image: url('500px-Symmetrical_8-pointed_star.svg.png');
+}
+
+header{
+    background: url('WhatsApp Image 2025-10-07 at 22.35.16 (7).jpeg') no-repeat top left;
+}
