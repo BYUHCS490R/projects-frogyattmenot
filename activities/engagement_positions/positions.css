@@ -1,0 +1,17 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.maface{
+    border: thin black;
+    width: 300px;
+    float: left;
+}
+
+.maface img{
+    width: 100%;
+}
+
+.stop{
+    clar: both;
+}
