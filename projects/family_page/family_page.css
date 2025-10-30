@@ -4,21 +4,24 @@ body {
 }
 
 header {
-    background-color: burlywood;
-    color: white;
+    background-color: rgb(30, 30, 127);
+    color: aliceblue;
+    text-align: center;
 }
 
 .sidebar h3 {
     margin: 0;
 }
 
-main h2 {
+main {
     margin: 0;
+    width: 70%;
 }
 
 article {
     font-family: 'Times New Roman', Times, serif;
 }
+
 
 header h1 {
     margin: 0;
@@ -35,7 +38,7 @@ nav a {
     padding: 10px;
     text-decoration: none;
     background-color:cornflowerblue;
-    color: aliceblue;
+    color: rgb(225, 255, 245);
 }
 
 nav a:hover {
@@ -43,45 +46,68 @@ nav a:hover {
     color: cornflowerblue;
 }
 
-.main-row {
+.main-page {
     display: flex;
+    justify-content: space-around;
 }
 
 .sidebar {
-    width: 200px;
+    width: 30%;
+    padding: 20px;
+    background-color: aquamarine;
 }
 
-.card {
+.sidebar img {
+    width: 100%;
+}
+
+.sidebar figure {
+    margin: 0;
+}
+
+.member {
     border: thin solid black;
     box-shadow: 3px 3px 5px cadetblue;
     width: 300px;
     margin: 5px;
+    text-align: center;
 }
 
-.card img {
+.member img {
     width: 100%;
 }
 
 .row {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
+}
+
+@media ONLY print {
+    nav {
+        display: none;
+    }
+
+    .main_page {
+        flex-direction: column-reverse;
+    }
 }
 
 @media ONLY screen AND (max-width: 600px) {
-
-}
-
-@media ONLY screen AND (max-width: 400px) {
     nav {
         flex-direction: column;
     }
-    .main-row {
+    .main-page {
         flex-direction: column-reverse;
     }
     .sidebar {
         width: 100%;
     }
-    .main-card {
+    .main-member {
         order: -1;
+    }
+
+    main {
+        width: 100%;
     }
 }
