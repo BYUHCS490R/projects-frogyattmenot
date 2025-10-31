@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <link rel="stylesheet" href="tables.css">
+</head>
+<body>
+    <header>
+        <h1>Engagement - Tables</h1>
+    </header>
+    <nav>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </nav>
+    <main>
+        <table border="1"> <!--just for this assignment just for visualization since this tag is not being used anymore. supposed to use css. will learn next week-->
+            <caption>My Class Schedule</caption>
+            <thead>
+                <tr>
+                    <th>Department</th>
+                    <th>Number</th>
+                    <th>Title</th>
+                    <th>Time</th>
+                    <th>Location</th>
+                    <th>Credits</th>
+                </tr>
+                <tr>
+                    <th colspan="6">Fall Semester 2025</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">CS</td>
+                    <td>140</td>
+                    <td>Web Design</td>
+                    <td>5 PM MWF</td>
+                    <td>P4</td>
+                    <td rowspan="2">3</td>
+                </tr>
+                <tr>
+                    <td>101</td>
+                    <td>Intro To Programming</td>
+                    <td>10 AM MWF</td>
+                    <td>P3</td>
+                </tr>
+            </tbody>
+            <tfooter>
+                <tr>
+                    <th colspan="5" id="total-credits">Total Credits</th>
+                    <td headers="total-credits">12</td> <!--the id is used to connect the Total Credits with 12-->
+                </tr>
+            </tfooter>
+        </table>
+
+        <h2>Notes</h2>
+        <p></p>
+    </main>
+    <footer>
+        <p>&copy; 2025 Billery Allerian Ian Martin Idang @ frogyattmenot All Rights Reserved</p>
+    </footer>
+</body>
+</html>
