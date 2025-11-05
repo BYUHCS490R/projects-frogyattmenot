@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aqua;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+}
+
+.main-content {
+    display: flex;
+    flex: 3;
+    padding: 10px;
+    justify-content: center;
+}
+
+caption {
+    font-weight: bold;
+}
+
+.sidebar {
+    flex: 1;
+    width: 25%;
+    padding: 10px;
+    color:white;
+    background-color:darkorange
+}
+
+.sidebar h2 {
+    color: black;
+}
+
+.albums {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border-top: thick solid rgb(255, 255, 255);
+    border-bottom: thick solid rgb(0, 0, 0);
+    border-left: thick solid rgb(0, 0, 0);
+    border-right:  thick solid rgb(0, 0, 0);
+    background-color: aliceblue;
+}
+
+.albums th, .albums td {
+    border: thin solid rgb(255, 255, 255);
+    padding: 15px 5px 15px 5px;
+}
+
+.row1 th {
+    border: thick solid rgb(0, 0, 0);
+    background-color: darkorange;
+}
+
+.row4 {
+    border: thick solid rgb(0, 0, 0);
+    background-color: darkorange;
+}
+
+header h1 {
+    text-align: center;
+}
+
+header {
+    background-color: darkorange;
+    padding: 10px;
+}
+
+nav {
+    display:flex;
+    text-align: center;
+    justify-content: space-evenly;
+    background-color: black;
+}
+
+nav a {
+    text-decoration: none;
+    border-radius: 5px;
+    color:black;
+    background-color: chartreuse;
+    padding: 10px 50px 10px 50px;
+    margin: 10px
+}
+
+nav a:hover {
+    color: aliceblue;
+    background-color: aquamarine;
+}
+
+.row2 {
+    background-color:black;
+    color: aliceblue;
+    text-align: center;
+}
+
+.row3 {
+    background-color: lightsalmon;
+    text-align: center;
+}
+
+.row5, .row7, .row9 {
+    background-color:  lightsalmon;
+    text-align: center;
+}
+
+.row6, .row8, .row10 {
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+}
