@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 15px;
+    background-color: darksalmon;
+}
+
+header h1 {
+    color: white;
+}
+
+.main-content {
+    margin: 20px;
+}
+
+fieldset {
+    background-color: rgb(255, 240, 230);
+    width: 80%;
+    border: thick solid darksalmon;
+    margin: auto;
+}
+
+legend {
+    background-color:darksalmon;
+    padding: 20px 50px 20px 50px;
+    color: aliceblue;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.form-part {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.form-part label {
+    width: 150px;
+    text-align: right;
+}
+
+.form-part input:not([type='submit']), .form-part select, .form-part textarea {
+    padding: 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(255, 233, 230);
+}
+
+.form-part input:not([type='submit']):focus, .form-part select:focus, .form-part textarea:focus {
+    background-color:antiquewhite;
+}
+
+.spacer {
+    width: 150px;
+    text-align: right;
+}
+
+.form-part input[type='radio'] {
+    margin-left: 5px;
+}
+
+.check-part {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: darksalmon;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.form-part input[type='submit'] {
+    background-color:darksalmon;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 3px;
+}
+
+.form-part input[type='submit']:hover {
+    background-color:rgb(255, 80, 32);
+    cursor: pointer;
+}
+
+
+@media ONLY screen AND (max-width: 480px) {
+    .form-part, .check-part {
+        flex-direction: column;
+    }
+    
+    .form-part label, .spacer {
+        text-align: left;
+    }
+}

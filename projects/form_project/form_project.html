@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billery's Form</title>
+    <link rel="stylesheet" href="form_project.css">
+</head>
+<body>
+    <header>
+        <h1>Form Page</h1>
+    </header>
+    <main>
+        <div class="main-content">
+            <form action="form_section.html" method="post">
+                <fieldset>
+                    <legend>Register</legend>
+                    <div class="form-part">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" name="first-name" id="first-name" placeholder="ex: Bob">
+                    </div>
+                    <div class="form-part">
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" name="last-name" id="last-name" placeholder="ex: Smith">
+                    </div>
+                    <div class="form-part">
+                        <label for="password">Password:</label>
+                        <input type="password" name="password" id="password">
+                    </div>
+                    <div class="form-part">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="your@email.com">
+                    </div>
+                    <div class="form-part">
+                        <label for="phone-number">Phone Number:</label>
+                        <input type="tel" name="phone-number" id="phone-number" placeholder="ex: 012-3456789">
+                    </div>
+                    <div class="form-part">
+                        <label for="state">State:</label>
+                        <select name="state" id="state">
+                            <option value="blank">----</option>
+                            <option value="SBH">Sabah</option>
+                            <option value="SWK">Sarawak</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-part">
+                        <label for="other_state">If selected 'other', please put in your state in the text box below:</label>
+                        <textarea name="other_state" id="other_state" placeholder="ex: JHR, Johor"></textarea>
+                    </div>
+                    <div class="check-part">
+                        <div class="spacer">Gender:</div>
+                        <label><input type="radio" name="gender" value="Male">Male</label>
+                        <label><input type="radio" name="gender" value="Female">Female</label>
+                    </div>
+                    <div class="check-part">
+                        <div class="spacer"></div>
+                        <label><input type="checkbox" id="checkbox">I agree to the terms and conditions</label>
+                    </div>
+                    <div class="form-part">
+                    <div class="spacer"></div>
+                        <input type="submit" value="Register Account">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Billery Allerian Ian Martin Idang @ frogyattmenot All Rights Reserved</p>
+    </footer>
+</body>
+</html>
