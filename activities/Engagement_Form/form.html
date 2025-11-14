@@ -17,7 +17,7 @@
         <a href="#">Link</a>
     </nav>
     <main>
-        <form action="form_processes.html" method="post"> <!--method="get" puts everything in the browser path while post is more secure as it hides the data up in the browser. https allows the browser to stay secure. most forms filled out are post request. post is change: can add, update or remove, delete, destroy, etc. use get request on like google search, youtube. with get  request, its just reading the data. -->
+        <form action="form_processes.html" method="post" id="myform"> <!--method="get" puts everything in the browser path while post is more secure as it hides the data up in the browser. https allows the browser to stay secure. most forms filled out are post request. post is change: can add, update or remove, delete, destroy, etc. use get request on like google search, youtube. with get  request, its just reading the data. -->
             <fieldset>
                 <legend>Sign Up</legend>
                 <div class="form-row">
@@ -62,11 +62,41 @@
         </form>
         <h2>Notes</h2>
         <p>
-            margins overlap when they meet. 
+            Note: What is JavaScript? JavaScript is a high-level, dynamic programming language created by Brendan Eich at Netscape in 1995. It was originally called Mocha, then LiveScript, and was renamed "JavaScript" largely for marketing reasons to align with Java's popularity. JavaScript runs in the browser (manipulates the DOM) and can also run on the server with Node.js. Adjacent vertical margins on block elements can collapse (they may appear to overlap). jQuery was a popular front‑end library; today React (maintained by Meta) is widely used. You can include JavaScript by embedding it with a &lt;script&gt; tag in your HTML or by linking an external .js file with &lt;script src="...">&lt;/script&gt;. 
         </p>
     </main>
     <footer>
         <p>&copy; 2025 Billery Allerian Ian Martin Idang @ frogyattmenot All Rights Reserved</p>
     </footer>
+    <script>
+        document.getElementById('myform').addEventListener('submit', function(event) { //adding an event listener to the form for the submit event 
+            event.preventDefault(); // Prevent the default form submission
+            alert('Form submitted!'); // Alert to indicate form submission
+            const fullname = document.getElementById('fname'); //getting the values from the form inputs
+            const email = document.getElementById('email'); //assuming there's an email input field with id 'email'
+            const password = document.getElementById('pword'); //assuming there's a password input field with id 'pword'
+            const age = document.getElementById('age'); //assuming there's an age input field with id 'age'
+
+            if (!fullname || !email) { //validators to check if name and email are provided
+                alert("You need a name and email.");
+                return;
+            }
+
+            if (!age || age <18) { //validator to check if age is 18 or older
+                alert("You need to be 18");
+                return;
+            } 
+
+            const formData = { 
+                fullname: fullname, //the right needs to be the same as in the const above
+                email: email,
+                password: password,
+                age: age
+            }; //creating an object to hold the form data
+
+            console.log(formData);
+            // Here you can add code to send formData to the server using fetch or XMLHttpRequest
+        });
+    </script>
 </body>
 </html>
