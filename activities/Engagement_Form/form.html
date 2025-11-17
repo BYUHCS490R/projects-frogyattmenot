@@ -17,6 +17,7 @@
         <a href="#">Link</a>
     </nav>
     <main>
+        <div id="message"></div>
         <form action="form_processes.html" method="post" id="myform"> <!--method="get" puts everything in the browser path while post is more secure as it hides the data up in the browser. https allows the browser to stay secure. most forms filled out are post request. post is change: can add, update or remove, delete, destroy, etc. use get request on like google search, youtube. with get  request, its just reading the data. -->
             <fieldset>
                 <legend>Sign Up</legend>
@@ -27,6 +28,10 @@
                 <div class="form-row">
                     <label for="email">Email:</label> 
                     <input type="email" name="email" placeholder="your@email.com" id="email"> <!--putting type="email" allows for the @ to appear on the keyboard on mobile phones.-->
+                </div>
+                <div class="form-row">
+                    <label for="age">Age:</label>
+                    <input type="number" name="age" id="age" min="0" max="120" value="18"> <!--min and max attributes set the limits for the number input. value sets the default value.-->
                 </div>
                 <div class="form-row">
                     <label for="pword">Password:</label>
@@ -68,8 +73,9 @@
     <footer>
         <p>&copy; 2025 Billery Allerian Ian Martin Idang @ frogyattmenot All Rights Reserved</p>
     </footer>
+    <srcipt src="form.js"></srcipt>
     <script>
-        document.getElementById('myform').addEventListener('submit', function(event) { //adding an event listener to the form for the submit event 
+        document.getElementById('myform').addEventListener('submit', function(event) { //adding an event listener to the form for the submit event  
             event.preventDefault(); // Prevent the default form submission
             alert('Form submitted!'); // Alert to indicate form submission
             const fullname = document.getElementById('fname'); //getting the values from the form inputs
@@ -96,6 +102,23 @@
 
             console.log(formData);
             // Here you can add code to send formData to the server using fetch or XMLHttpRequest
+
+            const xhr = new XMLHttpRequest(); //creating a new XMLHttpRequest object
+            xhr.open("GET", "submit.json", true);
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    alert("Form submitted successfully!");
+                    const response = JSON.parse(xhr.responseText);
+                    console.log(response);
+                    //document.getElementById('myForm').reset();
+                    document.getElementById('myform').innerHTML = '';
+                    document.getElementById('message').innerText = response.message;
+                } else if (xhr.readyState === 4) {
+                    alert("Error submitting form.");
+                }
+            };
+            xhr.send(JSON.stringify(formData)); //sending the form data as a JSON string
         });
     </script>
 </body>
