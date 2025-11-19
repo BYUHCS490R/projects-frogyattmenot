@@ -73,10 +73,10 @@
     <footer>
         <p>&copy; 2025 Billery Allerian Ian Martin Idang @ frogyattmenot All Rights Reserved</p>
     </footer>
-    <srcipt src="form.js"></srcipt>
-    <script>
+    <srcipt src="form.js"></srcipt> <!--this is how to link an external javascript file.-->
+    <script> //this is how to put javascript code directly into the html file.
         document.getElementById('myform').addEventListener('submit', function(event) { //adding an event listener to the form for the submit event  
-            event.preventDefault(); // Prevent the default form submission
+            event.preventDefault(); // Prevent the default form submission. default form submission is to send data to the server and refresh the page.
             alert('Form submitted!'); // Alert to indicate form submission
             const fullname = document.getElementById('fname'); //getting the values from the form inputs
             const email = document.getElementById('email'); //assuming there's an email input field with id 'email'
@@ -84,7 +84,7 @@
             const age = document.getElementById('age'); //assuming there's an age input field with id 'age'
 
             if (!fullname || !email) { //validators to check if name and email are provided
-                alert("You need a name and email.");
+                alert("You need a name and email."); //! is always opposite. ! in front of the constant means empty or not provided. || is or. && is and.
                 return;
             }
 
@@ -94,9 +94,9 @@
             } 
 
             const formData = { 
-                fullname: fullname, //the right needs to be the same as in the const above
+                fname: fullname, 
                 email: email,
-                password: password,
+                pword: password,
                 age: age
             }; //creating an object to hold the form data
 
