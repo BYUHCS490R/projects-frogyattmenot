@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI form</title>
+    <link rel="stylesheet" href="mbti.css">
+</head>
+<body>
+    <header>
+        <h1>MBTI Form</h1>
+        <h2>Provide Your Information</h2>
+        <nav>
+            <a href="mbtiindex.html">Home</a>
+            <a href="intro_to_mbti.html">Introduction to MBTI</a>
+            <a href="16_types.html">The 16 Personality Types</a>
+            <a href="cf.html">Cognitive Functions Explained</a>
+            <a href="mbti_and_cf_relation.html">How MBTI and Cognitive Functions Relate</a>
+            <a href="applications.html">Applications of MBTI and Cognitive Functions</a>
+        </nav>
+    </header>
+    <main>
+        <div class="form-container">
+            <form action="submit_form.html" method="post" id="mbti_form">
+                <fieldset>
+                    <legend>Sign Up</legend>
+
+                    <div class="form-part">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" placeholder="Your full name">
+                    </div>
+
+                    <div class="form-part">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="your@email.com">
+                    </div>
+
+                    <div class="form-part">
+                        <label for="age">Age:</label>
+                        <input type="number" name="age" id="age" placeholder="Your age">
+                    </div>
+
+                    <div class="form-part">
+                        <label for="mbti">Your MBTI type:</label>
+                        <input type="text" name="mbti" id="mbti" placeholder="ex: INFP">
+                    </div>
+
+                    <div class="form-part">
+                        <p>If you haven't taken the test yet, you can take it <a href="https://www.16personalities.com/free-personality-test">here</a></p>
+                    </div>
+
+                    <div class="form-part">
+                        <label for="comments">Comments/Feedback:</label>
+                        <textarea name="comments" id="comments" placeholder="Your comments or feedback"></textarea>
+                    </div>
+
+                    <div class="form-part">
+                        <label for="submit"></label>
+                        <input type="submit" value="Submit">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Billery Allerian Ian Martin Idang @ frogyattmenot All Rights Reserved</p>
+    </footer>
+    <script>
+        document.getElementById('mbti_form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const age = document.getElementById('age').value;
+            const mbti = document.getElementById('mbti').value;
+            const comments = document.getElementById('comments').value;
+
+            if (!name || !email || !age || !mbti) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            const formData = {
+                name: name.value,
+                email: email.value,
+                age: age.value,
+                mbti: mbti.value,
+                comments: comments.value
+            };
+
+            console.log('Form Data:', formData);
+            alert('Thank you for your submission!');
+
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'submit.json', true);
+            xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    alert('Registration successful!');
+                    const response = JSON.parse(xhr.responseText);
+                    console.log(response);
+                    document.getElementById('mbti_form').innerHTML = '';
+                    document.getElementById('message').innerText = response.message;
+                } else if (xhr.readyState === 4) {
+                    alert('Error submitting form.');
+                }
+            };
+            xhr.send(JSON.stringify(formData)); 
+        })
+    </script>
+</body>
+</html>

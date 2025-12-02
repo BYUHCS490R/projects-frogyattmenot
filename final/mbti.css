@@ -11,6 +11,25 @@ header {
     text-align: center;
 }
 
+.sign-in {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.sign-in a {
+    color: white;
+    text-decoration: none;
+    background-color:#de9836;
+    padding: 10px 15px;
+    border-radius: 50px;
+}
+
+.sign-in a:hover {
+    background-color: white;
+    color:#de9836;
+}
+
 header h1 {
     color: white;
     margin: 0;
@@ -29,7 +48,7 @@ header h3 {
     margin: 0;
     font-weight: normal;
     font-size: 90%;
-    padding-bottom: 10px;
+    padding-bottom: 20px
 }
 
 header nav {
@@ -107,6 +126,12 @@ p a {
     border-radius: 8px;
 }
 
+.link img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
 .link a {
     text-decoration: none;
     background-color: #4CAF50;
@@ -119,9 +144,140 @@ p a {
     color: #4CAF50;
 }
 
+thead th {
+    background-color: #4CAF50;
+    color: white;
+    border: thin solid rgb(16, 104, 41);
+    border-bottom: thick solid rgb(16, 104, 41);
+    padding: 15px 5px 15px 5px;
+}
+
+caption {
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border-top: thick solid rgb(16, 104, 41);
+    border-bottom: thick solid rgb(16, 104, 41);
+    border-left: thick solid rgb(16, 104, 41);
+    border-right:  thick solid rgb(16, 104, 41);
+    background-color: aliceblue;
+}
+
+table td {
+    border: thin solid rgb(16, 104, 41);
+    padding: 15px 5px 15px 5px;
+}
+
+.form-container {
+   margin: 20px
+}
+
+fieldset {
+    background-color: rgb(255, 240, 230);
+    width: 80%;
+    border: thick solid #4CAF50;
+    margin: auto;
+}
+
+legend {
+     background-color:#de9836;
+    padding: 20px 50px 20px 50px;
+    color: aliceblue;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.form-part {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.form-part label {
+    width: 150px;
+    text-align: right;
+}
+
+.form-part input:not([type='submit']), .form-part textarea {
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.form-part input:not([type='submit']):focus, .form-part textarea:focus {
+    background-color:antiquewhite;
+}
+
+.form-part p {
+    margin: 0;
+    text-align: center;
+}
+
+.form-part input[type='submit'] {
+    background-color:#de9836;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 3px;
+}
+
+.form-part input[type='submit']:hover {
+    background-color:antiquewhite;
+    color: #de9836;
+    cursor: pointer;
+}
+
 footer {
+    font-family: 'Courier New', Courier, monospace;
     background-color: #4CAF50;
     color: white;
     text-align: center;
     padding: 10px;
+}
+
+@media ONLY print {
+    nav {
+        display: none;
+    }
+
+    .main_page {
+        flex-direction: column-reverse;
+    }
+}
+
+@media ONLY screen AND (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+    .sign-in {
+
+    }
+    .main-page {
+        flex-direction: column-reverse;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .main-link {
+        order: -1;
+    }
+
+    main {
+        width: 100%;
+    }
+     .form-part {
+        flex-direction: column;
+    }
+    
+    .form-part label {
+        text-align: left;
+    }
+
+    iframe {
+        width: 100%;
+    }
 }
