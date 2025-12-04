@@ -51,15 +51,14 @@ header h3 {
     padding-bottom: 20px
 }
 
-header nav {
+nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     font-family: sans-serif;
-    flex-wrap: wrap;
     gap: 10px;
 }
 
-header nav a {
+nav a {
     display: inline-block;
     color: white;
     text-decoration: none;
@@ -100,7 +99,7 @@ main {
     padding: 15px;
 }
 
-main h3 {
+main h2 {
     color: #404940;
 }
 
@@ -132,7 +131,7 @@ main img {
 }
 
 .link img {
-    width: 100%;
+    width: 80%;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
