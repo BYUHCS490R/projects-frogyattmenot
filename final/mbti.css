@@ -83,6 +83,10 @@ header nav a:hover {
 
 }
 
+main {
+    margin: 15px;
+}
+
 .sidebar {
     width: 20%;
     background-color: rgb(236, 246, 255);
@@ -94,7 +98,7 @@ header nav a:hover {
     border-radius: 8px;
 }
 
-main {
+#homeMain {
     width: 80%;
     padding: 15px;
 }
@@ -108,9 +112,16 @@ p a {
     text-decoration: none;
 }
 
+.imgCont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
 main img {
     width: 50%;
-    padding: 20px;
+
 }
 
 .links-container {
@@ -131,7 +142,7 @@ main img {
 }
 
 .link img {
-    width: 80%;
+    width: 100%;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
@@ -257,22 +268,22 @@ footer {
     nav {
         flex-direction: column;
     }
-    .sign-in {
-
-    }
     .main-page {
+        width: 100%;
         flex-direction: column-reverse;
+        align-items: center;
     }
     .sidebar {
-        width: 100%;
+        width: 90%;
+
     }
     .main-link {
         order: -1;
     }
 
-    main {
-        width: 100%;
-    }
+    /* main {
+        width: 80%;
+    } */
      .form-part {
         flex-direction: column;
     }
